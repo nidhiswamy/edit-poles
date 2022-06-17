@@ -1,6 +1,6 @@
 # Edit Poles Widget
 
-This custom widget is created to help users select, display, and edit sample pole data.
+This custom widget is created in ArcGIS Web AppBuilder to help users select, display, and edit sample pole data.
 
 ## Description
 
