@@ -57,33 +57,33 @@ define([
         getResultsTable: function(geometry, graphics) {
             var area = geometryEngine.geodesicArea(geometry, "acres").toFixed(2);
 
-            // sort from highest acres to lowest
-            graphics.sort(function(a, b) {
-                var aSize = geometryEngine.geodesicArea(a.geometry, "acres");
-                var bSize = geometryEngine.geodesicArea(b.geometry, "acres");
-                if (aSize > bSize) {
-                    return -1;
-                }
-                if (aSize < bSize) {
-                    return 1;
-                }
-                return 0;
-            });
+            // // sort from highest acres to lowest
+            // graphics.sort(function(a, b) {
+            //     var aSize = geometryEngine.geodesicArea(a.geometry, "acres");
+            //     var bSize = geometryEngine.geodesicArea(b.geometry, "acres");
+            //     if (aSize > bSize) {
+            //         return -1;
+            //     }
+            //     if (aSize < bSize) {
+            //         return 1;
+            //     }
+            //     return 0;
+            // });
+
+            // Displaying the sample pole data within the polygon
+            
 
             // Editing the table to display sample pole data
             var areas = graphics.map(feature => {
-                return `<tr><td class="swatch" style="background-color:${
-          feature.symbol.color
-        }"> </td> <td>${feature.attributes.musym}</td><td>${
-          feature.attributes.muname
-        }</td><td class="acresColumn">${geometryEngine
-          .geodesicArea(feature.geometry, "acres")
-          .toFixed(2)} acres</td></tr>`;
+                return `<tr><td class="swatch" style="background-color:${feature.symbol.color}"></td>
+                <td>${feature.attributes.poleID}</td>
+                <td>${feature.attributes.company}</td>
+                <td class="acresColumn">${geometryEngine.geodesicArea(feature.geometry, "acres").toFixed(2)} 
+                acres</td></tr>`;
             });
             
-            return `<table><tr class="totalRow"><td colspan="3">Total Acres:</td><td>${area} acres</td></tr>${areas.join(
-                ""
-            )}</table>`;
+            return `<table><tr class="totalRow"><td colspan="3">Total Acres:</td><td>${area} 
+            acres</td></tr>${areas.join("")}</table>`;
         }
     };
 });
