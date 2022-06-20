@@ -8,6 +8,10 @@ The sample pole data was created through a geodatabase file in ArcGIS Pro and pu
 which uses this web map as a reference to edit all data. This widget aims to let users draw a polygon over an area on the map and displays the data given, while allowing 
 them to add, delete, and customize the poles. They can also choose to view the selection in a new graphics layer.
 
+## Installation
+1. Follow the [Getting Started Guide - Developer's Edition](https://developers.arcgis.com/web-appbuilder/guide/getstarted.htm)
+2. 
+
 ## Features
 - [ ] Query the feature layer
 - [ ] Clip the results
