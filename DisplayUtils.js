@@ -57,7 +57,7 @@ define([
         getResultsTable: function(geometry, graphics) {
             var area = geometryEngine.geodesicArea(geometry, "acres").toFixed(2);
 
-            // // sort from highest acres to lowest
+            // sort from highest acres to lowest
             // graphics.sort(function(a, b) {
             //     var aSize = geometryEngine.geodesicArea(a.geometry, "acres");
             //     var bSize = geometryEngine.geodesicArea(b.geometry, "acres");
