@@ -10,7 +10,8 @@ them to add, delete, and customize the poles. They can also choose to view the s
 
 ## Installation
 1. Follow the [Getting Started Guide - Developer's Edition](https://developers.arcgis.com/web-appbuilder/guide/getstarted.htm)
-2. 
+2. For portal URL, specify the portal you published the web map in. 
+3. 
 
 ## Features
 - [ ] Query the feature layer
