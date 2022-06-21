@@ -11,7 +11,7 @@ them to add, delete, and customize the poles. They can also choose to view the s
 ## Installation
 1. Follow the [Getting Started Guide - Developer's Edition](https://developers.arcgis.com/web-appbuilder/guide/getstarted.htm)
 2. For portal URL, specify the portal you published the web map in. 
-3. Create your custom 2D web map, and under widgets, hit Add Widget. 
+3. Create your custom 2D web map and under widgets, hit Add Widget. 
 4. The *Edit Poles* custom widget should appear in the list of all widgets.
 5. Once added, configure the settings to match your required customizations!
 
