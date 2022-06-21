@@ -85,18 +85,19 @@ define([
                 </tr>`;
             });
             
-            return `<table>
+            return `
+            <h3>Selected Poles Data</h3>
+            <table>
             <tr class="totalRow">
             <thead>
- 
-            <tr>
-                <th>Pole ID</th>
-                <th>Street Name</th>
-                <th>Company</th>
-            </tr>
- 
+                <tr>
+                    <th>Pole ID</th>
+                    <th>Street Name</th>
+                    <th>Company</th>
+                </tr>
             </thead>
-            </tr>${poles.join("")}
+            </tr>
+            ${poles.join("")}
             </table>`;
         }
     };

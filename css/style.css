@@ -2,9 +2,14 @@
         font-weight: bold;
         color: green;
 }
-.editpoles td, th {
+.editpoles th {
         padding: 10px 20px;
-        border: 1px solid #000
+        border: 1px solid #000;
+        font-weight: bold;
+}
+.editpoles td {
+        padding: 10px 20px;
+        border: 1px solid #000;
 }
 .editpoles .acresColumn {
         min-width: 100px;
