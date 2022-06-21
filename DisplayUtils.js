@@ -55,28 +55,7 @@ define([
          * @param {array} graphics
          */
         getResultsTable: function(geometry, graphics) {
-            // var area = geometryEngine.geodesicArea(geometry, "acres").toFixed(2);
-
-            // sort from highest acres to lowest
-            graphics.sort(function(a, b) {
-               return 0; 
-            });
-            //     var aSize = geometryEngine.geodesicArea(a.geometry, "acres");
-            //     var bSize = geometryEngine.geodesicArea(b.geometry, "acres");
-            //     if (aSize > bSize) {
-            //         return -1;
-            //     }
-            //     if (aSize < bSize) {
-            //         return 1;
-            //     }
-            //     return 0;
-            // });
-
-            // Table column setup
-
-            
-
-            // Editing the table to display sample pole data
+            // The table displaying the selected features data
             var poles = graphics.map(feature => {
                 return `<tr>
                 <td class="poleid">${feature.attributes.poleid}</td>
@@ -85,8 +64,7 @@ define([
                 </tr>`;
             });
             
-            return `
-            <h3>Selected Poles Data</h3>
+            return `<h3>Selected Poles Data</h3>
             <table>
             <tr class="totalRow">
             <thead>
