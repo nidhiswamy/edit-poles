@@ -54,7 +54,7 @@ function(declare, BaseWidget, Draw, GraphicsLayer, GeometryUtils, DisplayUtils) 
                                 graphicsArray => {
                                         this.showResults(
                                                 event.geometry,
-                                                GeometryUtils.dissolve(graphicsArray, "mukey")
+                                                GeometryUtils.dissolve(graphicsArray, "poleID")
                                         );
                                 },
                                 err => {

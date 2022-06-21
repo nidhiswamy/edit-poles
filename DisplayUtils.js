@@ -27,8 +27,8 @@ define([
             ];
 
             var graphics = graphicsArray.map((graphic, i) => {
-                var color = i > COLOR_OPTIONS.length - 1 ? "#D3D3D3" : COLOR_OPTIONS[i];
-
+                // var color = i > COLOR_OPTIONS.length - 1 ? "#D3D3D3" : COLOR_OPTIONS[i];
+                var color = "#A0E7E5";
                 var polygonSymbol = new SimpleFillSymbol(
                     SimpleFillSymbol.STYLE_SOLID,
                     new SimpleLineSymbol(
@@ -74,16 +74,17 @@ define([
             
 
             // Editing the table to display sample pole data
-            var areas = graphics.map(feature => {
+            var poles = graphics.map(feature => {
                 return `<tr><td class="swatch" style="background-color:${feature.symbol.color}"></td>
-                <td>${feature.attributes.poleID}</td>
+                <td>${feature.attributes.poleid}</td>
+                <td>${feature.attributes.streetname}</td>
                 <td>${feature.attributes.company}</td>
                 <td class="acresColumn">${geometryEngine.geodesicArea(feature.geometry, "acres").toFixed(2)} 
                 acres</td></tr>`;
             });
             
             return `<table><tr class="totalRow"><td colspan="3">Total Acres:</td><td>${area} 
-            acres</td></tr>${areas.join("")}</table>`;
+            acres</td></tr>${poles.join("")}</table>`;
         }
     };
 });
