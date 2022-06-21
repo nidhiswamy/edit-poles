@@ -2,3 +2,15 @@
         font-weight: bold;
         color: green;
 }
+.editpoles td, th {
+        padding: 10px 20px;
+        border: 1px solid #000
+}
+.editpoles .acresColumn {
+        min-width: 100px;
+}
+.editpoles .totalRow {
+        font-weight: bolder;
+        border-collapse: collapse;
+        border-spacing:0;
+}

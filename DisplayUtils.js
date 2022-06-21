@@ -55,10 +55,12 @@ define([
          * @param {array} graphics
          */
         getResultsTable: function(geometry, graphics) {
-            var area = geometryEngine.geodesicArea(geometry, "acres").toFixed(2);
+            // var area = geometryEngine.geodesicArea(geometry, "acres").toFixed(2);
 
             // sort from highest acres to lowest
-            // graphics.sort(function(a, b) {
+            graphics.sort(function(a, b) {
+               return 0; 
+            });
             //     var aSize = geometryEngine.geodesicArea(a.geometry, "acres");
             //     var bSize = geometryEngine.geodesicArea(b.geometry, "acres");
             //     if (aSize > bSize) {
@@ -70,21 +72,32 @@ define([
             //     return 0;
             // });
 
-            // Displaying the sample pole data within the polygon
+            // Table column setup
+
             
 
             // Editing the table to display sample pole data
             var poles = graphics.map(feature => {
-                return `<tr><td class="swatch" style="background-color:${feature.symbol.color}"></td>
-                <td>${feature.attributes.poleid}</td>
+                return `<tr>
+                <td class="poleid">${feature.attributes.poleid}</td>
                 <td>${feature.attributes.streetname}</td>
                 <td>${feature.attributes.company}</td>
-                <td class="acresColumn">${geometryEngine.geodesicArea(feature.geometry, "acres").toFixed(2)} 
-                acres</td></tr>`;
+                </tr>`;
             });
             
-            return `<table><tr class="totalRow"><td colspan="3">Total Acres:</td><td>${area} 
-            acres</td></tr>${poles.join("")}</table>`;
+            return `<table>
+            <tr class="totalRow">
+            <thead>
+ 
+            <tr>
+                <th>Pole ID</th>
+                <th>Street Name</th>
+                <th>Company</th>
+            </tr>
+ 
+            </thead>
+            </tr>${poles.join("")}
+            </table>`;
         }
     };
 });
