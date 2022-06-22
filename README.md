@@ -17,5 +17,5 @@ them to add, delete, and customize the poles. They can also choose to view the s
 
 ## Features
 - [X] Query the feature layer
-- [ ] Clip the results
+- [X] Clip the results
 - [ ] Display the results in a new graphics layer
