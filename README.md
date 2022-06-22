@@ -16,6 +16,6 @@ them to add, delete, and customize the poles. They can also choose to view the s
 5. Once added, configure the settings to match your required customizations!
 
 ## Features
-- [ ] Query the feature layer
+- [X] Query the feature layer
 - [ ] Clip the results
 - [ ] Display the results in a new graphics layer

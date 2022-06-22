@@ -27,8 +27,7 @@ define([
             ];
 
             var graphics = graphicsArray.map((graphic, i) => {
-                // var color = i > COLOR_OPTIONS.length - 1 ? "#D3D3D3" : COLOR_OPTIONS[i];
-                var color = "#A0E7E5";
+                var color = i > COLOR_OPTIONS.length - 1 ? "#D3D3D3" : COLOR_OPTIONS[i];
                 var polygonSymbol = new SimpleFillSymbol(
                     SimpleFillSymbol.STYLE_SOLID,
                     new SimpleLineSymbol(
@@ -58,7 +57,7 @@ define([
             // The table displaying the selected features data
             var poles = graphics.map(feature => {
                 return `<tr>
-                <td class="poleid">${feature.attributes.poleid}</td>
+                <td class="poleInfo">${feature.attributes.poleid}</td>
                 <td>${feature.attributes.streetname}</td>
                 <td>${feature.attributes.company}</td>
                 </tr>`;
