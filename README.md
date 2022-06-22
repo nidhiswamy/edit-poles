@@ -18,4 +18,4 @@ them to add, delete, and customize the poles. They can also choose to view the s
 ## Features
 - [X] Query the feature layer
 - [X] Clip the results
-- [ ] Display the results in a new graphics layer
+- [X] Display the results in a new graphics layer (data grid)
