@@ -67,7 +67,6 @@ function(declare, BaseWidget, Draw, GraphicsLayer, GeometryUtils, DisplayUtils) 
                                 geometry, graphics
                         );
                 }
-
         });
         return clazz;
 });
